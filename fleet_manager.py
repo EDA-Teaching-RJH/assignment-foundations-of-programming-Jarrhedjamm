@@ -27,9 +27,13 @@ def main():
       while True:
             choice =display_menu(user)
 
+            if choice == "1":
+                  display_roster(n, r, d, i)
+
             if choice == "9":
                 print("Goodbye, captain")
             break
 def display_roster(names, ranks, divisions, id):
       print("DISPLAYING ROSTER")
-      print( names, ranks, divisions, id)
+      for n, r, d, i in zip(names, ranks, divisions, id):
+            print(f"id: {i} | name: {n} | rank: {r} | divisions: {d}")
