@@ -44,13 +44,16 @@ def run_system_monolith():
         elif opt == "3":
             rem = input("Name to remove: ")
 
-        if rem in n:
-            idx = n.index(rem)
-            n.pop(idx)
-            r.pop(idx)
-            d.pop(idx)
-            print("Removed.")
-            
+            if rem in n:
+                idx = n.index(rem)
+                n.pop(idx)
+                r.pop(idx)
+                d.pop(idx)
+                print("Removed.")
+            else:
+                print("name not found.")
+  
+
         elif opt == "4":
             print("Analyzing...")
             count = 0
@@ -90,4 +93,4 @@ def run_system_monolith():
             
         print("End of cycle.")
 
-run_system_monolith
+run_system_monolith()
