@@ -34,6 +34,8 @@ def add_member(names, ranks, divisions, id):
       
       print(f"{new_name} has been added to the database")
 
+      return names, ranks, divisions, id
+
 def main():
       n, r, d, i = init_database()
       user = input("provide your Full Name")
@@ -42,6 +44,8 @@ def main():
 
             if choice == "1":
                   display_roster(n, r, d, i)
+            elif choice == "2":
+                n, r, d, i = add_member(n, r, d, i)
 
             if choice == "9":
                 print("Goodbye, captain")
@@ -50,4 +54,6 @@ def display_roster(names, ranks, divisions, id):
       print("DISPLAYING ROSTER")
       for n, r, d, i in zip(names, ranks, divisions, id):
             print(f"id: {i} | name: {n} | rank: {r} | divisions: {d}")
+
+main()
 
