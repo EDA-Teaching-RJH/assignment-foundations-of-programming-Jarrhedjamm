@@ -30,3 +30,6 @@ def main():
             if choice == "9":
                 print("Goodbye, captain")
             break
+def display_roster(names, ranks, divisions, id):
+      print("DISPLAYING ROSTER")
+      print( names, ranks, divisions, id)
